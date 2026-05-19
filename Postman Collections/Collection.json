@@ -299,6 +299,29 @@
 										"packages": {},
 										"requests": {}
 									}
+								},
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "12e743b1-a7ad-4d70-b7c1-43c9cef2a573",
+										"exec": [
+											"pm.sendRequest({\r",
+											"    url: pm.environment.get(\"BaseURI\") + \"/v1/contacts/\",\r",
+											"    method:\"GET\",\r",
+											"    header:{\"Authorization\": pm.environment.get(\"token\")}\r",
+											"\r",
+											"},\r",
+											"function(err, res){\r",
+											"    if(err)\r",
+											"}\r",
+											"\r",
+											"\r",
+											")"
+										],
+										"type": "text/javascript",
+										"packages": {},
+										"requests": {}
+									}
 								}
 							],
 							"id": "249dce7a-7b8c-495e-b95a-17e9d19eca8c",
